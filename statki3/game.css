@@ -1,0 +1,282 @@
+﻿* {
+    
+    margin: 0;
+    padding: 0;
+    
+}
+#form1 {
+    height: 100%;
+    width: 100%;
+}
+#boardsPanel {
+    
+    display: flex;
+    width:72vw;
+
+}
+.boardPanelLeft{
+    border: solid black 2px;
+    margin-right: 2vw;
+}
+.boardPanelRight {
+    border: solid black 2px;
+    margin-left: 2vw;
+}
+
+body {
+    background-color: rgba(61,75,119,1);
+    height: 100vh;
+    width: 100vw;
+}
+
+.checkboxtmp{
+    position:absolute;
+    top:60%;
+    display:block;
+}
+.butontmp{
+    display: flex;
+    position:absolute;
+    top: 70%;
+}
+
+.field {
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    .field:hover {
+        filter: brightness(80%);
+    }
+
+.selected {
+    border: solid red 4px;
+    filter: brightness(110%);
+}
+
+.row{
+    display:flex;
+}
+
+#panel1 {
+    position: absolute;
+    display: flex;
+    top: 20%;
+    left: 10%;
+}
+
+.validatecheckbox {
+    border: solid red 10px;
+}
+
+#settingShipsPanel{
+    display:flex;
+}
+.interfacePanel {
+    position: sticky;
+    top: 90%;
+    height: 10%;
+    background-color: #242F51;
+}
+
+.interfaceLabel {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+
+#shootbtn {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    position: absolute;
+    top: 9%;
+    left: 80%;
+    font-size: 1.8em;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 15%;
+    height: 70%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
+    background-color: brown /*hsla(260, 100%, 50%, 1);*/;
+    cursor: pointer;
+    outline: 0 !important;
+    animation: pulse 1s infinite alternate;
+    transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+
+#shootbtn:hover {
+    background-color: red;  /*hsla(220, 100%, 60%, 1)*/;
+    margin-top: -1px;
+    animation: none;
+}
+
+    #shootbtn:active {
+        border-bottom-width: 0;
+        margin-top: 5px;
+    }
+
+@keyframes pulse {
+    0% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 5px;
+    }
+}
+
+
+.checkboxContainer{
+    display:block;
+}
+.checkboxContainer input {
+    position: relative;
+    z-index: -9999;
+    visibility:hidden;
+}
+
+
+
+.firstCheckbox span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    background: url("icons/unchecked.bmp");
+    background-size: 20px 20px;
+}
+.firstCheckbox input:checked + span {
+    background: url("icons/checked.bmp");
+    background-size: 20px 20px;
+}
+.firstCheckbox label {
+    position:absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.secondCheckbox span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    background: url("icons/unchecked.bmp");
+    background-size: 20px 20px;
+}
+.secondCheckbox input:checked + span {
+    background: url("icons/checked.bmp");
+    background-size: 20px 20px;
+}
+.secondCheckbox label {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+}
+.thirdCheckbox span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 7%;
+    background: url("icons/unchecked.bmp");
+    background-size: 20px 20px;
+}
+
+.thirdCheckbox input:checked + span {
+    background: url("icons/checked.bmp");
+    background-size: 20px 20px;
+}
+
+.thirdCheckbox label {
+    position: absolute;
+    top: 40%;
+    left: 6%;
+}
+
+#setShipsToServerbtn {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    position: absolute;
+    top: 9%;
+    left: 80%;
+    font-size: 1.8em;
+    padding: 5px 10px;
+    border-radius: 50%;
+    width: 15%;
+    height: 70%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    border: 5px solid transparent;
+    border-bottom-color: #031d02;
+    background-color: #0b3d04; /*hsla(260, 100%, 50%, 1);*/
+    cursor: pointer;
+    outline: 0 !important;
+    animation: pulse 1s infinite alternate;
+    transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+
+    #setShipsToServerbtn:hover {
+        background-color: #166d09; /*hsla(220, 100%, 60%, 1)*/
+        margin-top: -1px;
+        animation: none;
+    }
+
+    #setShipsToServerbtn:active {
+        border-bottom-width: 0;
+        margin-top: 5px;
+    }
+
+
+#setShipbtn {
+    position: absolute;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    background-color: rgba(61,75,119,1);
+    border: white 1px solid;
+    left: 10%;
+    top: 50%;
+    width: 5%;
+    height: 30%;
+    opacity: 0.72;
+}
+#setShipbtn:hover{
+    opacity: 10;
+}
+
+#inGameLabel {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    position: absolute;
+    top: 4%;
+    left: 1%;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    width: 17%;
+    height: 80%;
+    text-align: center;
+    
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    animation: pulse 1s infinite alternate;
+}
+.inGameLabelGreen{
+    color: #166d09;
+}
+.inGameLabelRed{
+    color: #9b0606;
+}
+.inGameLabelWhite {
+    color: white;
+}
